@@ -27,12 +27,12 @@ body {
   background-size: cover;
   background-position: right;
   position: relative;
-  animation-name: leftImgAnimation;
+  /* animation-name: leftImgAnimation;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-iteration-count: 2;
   animation-delay: 4s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 
 #nav-bar {
@@ -60,7 +60,6 @@ body {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  animation: float 1s ease-in 2s 4 ease-in;
 }
 
 #center-img {
@@ -135,16 +134,16 @@ body {
   position: absolute;
   right: 0;
   /* transform: translate(-50%, 0); */
-  background-color: #df5544;
+  /* background-color: #df5544;
   animation-name: slide;
   animation-duration: 1s;
   animation-timing-function: ease-out;
   animation-iteration-count: 2;
   animation-delay: 2s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 
-@keyframes slide {
+/* @keyframes slide {
   0% {
     right: -5%;
   }
@@ -170,4 +169,4 @@ body {
   100% {
     right: 50%;
   }
-}
+} */
