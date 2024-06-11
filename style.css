@@ -8,6 +8,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #main {
@@ -52,6 +53,21 @@ body {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  animation: float 1s ease-in 2s 4 ease-in;
+}
+
+@keyframes float {
+  0% {
+    right: -10px;
+  }
+
+  50% {
+    right: 25%;
+  }
+
+  to {
+    right: 50%;
+  }
 }
 
 #center-img {
@@ -105,17 +121,17 @@ body {
 }
 
 #left-text h1 {
-  font-size: 50px;
-  font-weight: 600;
-  position: absolute;
+  font-size: 90px;
+  font-weight: 800;
+  /* position: absolute;
   right: 0;
-  bottom: 5%;
+  bottom: 5%; */
+  text-align: end;
+  color: #fff;
 }
 
 #left-text {
   position: absolute;
   bottom: 2%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  right: 3%;
 }
