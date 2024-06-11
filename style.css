@@ -9,3 +9,33 @@ body {
   width: 100%;
   height: 100%;
 }
+
+#main {
+  width: 100%;
+  height: 100%;
+  background-color: #dadada;
+  display: flex;
+}
+
+#left {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  background-image: url(./assets/football-players-img.avif);
+  background-size: cover;
+  background-position: right;
+}
+
+#nav-bar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+#right {
+  width: 50%;
+  height: 100%;
+  background-color: yellow;
+}
