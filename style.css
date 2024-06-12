@@ -51,15 +51,17 @@ body {
 }
 
 #upper-img {
-  height: 150px;
+  height: 160px;
   width: 150px;
   background-image: url(./assets/right-img1.avif);
   background-position: center;
   background-size: cover;
   position: absolute;
   top: 0;
-  left: 50%;
+  right: 15%;
   transform: translate(-50%, 0);
+  animation: topImgAnimation 2s cubic-bezier(0.19, 1, 0.22, 1) 1s 4 forwards;
+  animation-direction: 1s;
 }
 
 #center-img {
@@ -72,6 +74,9 @@ body {
   top: 50%;
   left: 15%;
   transform: translate(0, -50%);
+  animation: centerImgAnimation 2.5s cubic-bezier(0.19, 1, 0.22, 1) 1s 4
+    forwards;
+  animation-direction: 1s;
 }
 
 #bottom-img {
@@ -83,6 +88,8 @@ body {
   position: absolute;
   bottom: 0;
   right: 20%;
+  animation: bottomImgAnimation 3s cubic-bezier(0.19, 1, 0.22, 1) 1s 4 forwards;
+  animation-direction: 0.5s;
 }
 
 #button h5 {
@@ -105,6 +112,8 @@ body {
   top: 30%;
   right: -8%;
   transform: rotate(-90deg);
+  animation: rightTextAnimation 2s cubic-bezier(0.19, 1, 0.22, 1) 1s 4 forwards;
+  animation-direction: 1s;
 }
 
 #text h1 {
@@ -113,19 +122,22 @@ body {
 }
 
 #left-text h1 {
-  font-size: 90px;
+  font-size: 95px;
   font-weight: 800;
   /* position: absolute;
-  right: 0;
+  right: 3%;
   bottom: 5%; */
   text-align: end;
   color: #fff;
+  /* animation-name: slide; */
 }
 
 #left-text {
   position: absolute;
   bottom: 2%;
   right: 3%;
+  animation: slide 2s ease-in 1s 2 forwards;
+  animation-direction: 1s;
 }
 
 #overlay {
@@ -143,30 +155,65 @@ body {
   animation-fill-mode: forwards; */
 }
 
-/* @keyframes slide {
+@keyframes slide {
   0% {
-    right: -5%;
-  }
-
-  50% {
-    right: 50%;
-  }
-
-  to {
-    right: 100%;
-  }
-}
-
-@keyframes leftImgAnimation {
-  0% {
-    right: -5%;
-  }
-
-  50% {
-    right: 25%;
+    right: -50%;
+    opacity: 0;
   }
 
   100% {
-    right: 50%;
+    right: 10%;
+    opacity: 1;
   }
-} */
+}
+
+@keyframes topImgAnimation {
+  0% {
+    right: -10%;
+    opacity: 0;
+  }
+
+  100% {
+    right: 15%;
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes centerImgAnimation {
+  0% {
+    right: -40%;
+    opacity: 0;
+  }
+
+  100% {
+    right: 80%;
+    /* transform: translate(-50%, 0); */
+    opacity: 1;
+  }
+}
+
+@keyframes bottomImgAnimation {
+  0% {
+    right: -10%;
+    opacity: 0;
+  }
+
+  100% {
+    right: 20%;
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightTextAnimation {
+  0% {
+    right: -50%;
+    opacity: 0;
+  }
+
+  100% {
+    right: 5%;
+    opacity: 1;
+  }
+}
