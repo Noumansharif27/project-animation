@@ -95,16 +95,18 @@ body {
 #button h5 {
   font-weight: 200;
   font-size: 10px;
+  opacity: 1;
+  animation: buttonTextAnimation 2 ease-in-out 2s infinite forwards;
+  animation-direction: 1s;
 }
 
 #button {
-  border: 1px solid #000;
   padding: 40px 25px;
   display: inline-block;
-  border-radius: 50%;
   position: absolute;
   top: 200px;
   right: 30%;
+  animation: buttonAnimation 2s ease-in-out 1s infinite forwards;
 }
 
 #text {
@@ -213,7 +215,32 @@ body {
   }
 
   100% {
-    right: 5%;
+    right: -10%;
     opacity: 1;
   }
 }
+@keyframes buttonAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    border: 1px solid #000;
+    border-radius: 50%;
+  }
+}
+
+/* @keyframes buttonTextAnimation {
+  0% {
+    opacity: 0;
+    position: absolute;
+    bottom: -50%;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+} */
