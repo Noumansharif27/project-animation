@@ -60,8 +60,9 @@ body {
   top: 0;
   right: 15%;
   transform: translate(-50%, 0);
-  animation: topImgAnimation 2s cubic-bezier(0.19, 1, 0.22, 1) 1s 4 forwards;
+  animation: topImgAnimation 2s cubic-bezier(0.19, 1, 0.22, 1) 1s 1 forwards;
   animation-direction: 1s;
+  opacity: 0;
 }
 
 #center-img {
@@ -74,9 +75,10 @@ body {
   top: 50%;
   left: 15%;
   transform: translate(0, -50%);
-  animation: centerImgAnimation 2.5s cubic-bezier(0.19, 1, 0.22, 1) 1s 4
+  animation: centerImgAnimation 2.5s cubic-bezier(0.19, 1, 0.22, 1) 1s 1
     forwards;
   animation-direction: 1s;
+  opacity: 0;
 }
 
 #bottom-img {
@@ -88,8 +90,9 @@ body {
   position: absolute;
   bottom: 0;
   right: 20%;
-  animation: bottomImgAnimation 3s cubic-bezier(0.19, 1, 0.22, 1) 1s 4 forwards;
+  animation: bottomImgAnimation 3s cubic-bezier(0.19, 1, 0.22, 1) 1s 1 forwards;
   animation-direction: 0.5s;
+  opacity: 0;
 }
 
 #button h5 {
@@ -98,6 +101,7 @@ body {
   opacity: 1;
   animation: buttonTextAnimation 2 ease-in-out 2s infinite forwards;
   animation-direction: 1s;
+  opacity: 0;
 }
 
 #button {
@@ -107,6 +111,7 @@ body {
   top: 200px;
   right: 30%;
   animation: buttonAnimation 2s ease-in-out 1s infinite forwards;
+  opacity: 0;
 }
 
 #text {
@@ -116,6 +121,7 @@ body {
   transform: rotate(-90deg);
   animation: rightTextAnimation 2s cubic-bezier(0.19, 1, 0.22, 1) 1s 4 forwards;
   animation-direction: 1s;
+  opacity: 0;
 }
 
 #text h1 {
@@ -138,7 +144,7 @@ body {
   position: absolute;
   bottom: 2%;
   right: 3%;
-  animation: slide 2s ease-in 1s 2 forwards;
+  animation: slide 2s ease-in 1s 1 forwards;
   animation-direction: 1s;
 }
 
@@ -159,12 +165,12 @@ body {
 
 @keyframes slide {
   0% {
-    right: -50%;
+    bottom: -50%;
     opacity: 0;
   }
 
   100% {
-    right: 10%;
+    bottom: 3%;
     opacity: 1;
   }
 }
